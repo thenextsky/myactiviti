@@ -21,7 +21,7 @@
       	<h2 class="form-signin-heading">Please sign in</h2>
         <select name="name" class="form-control" style="margin-bottom:10px">
         	<#list userList as user>
-			  <option value ="${user.name}">${user.name}</option>
+			  <option value ="${user.name}">${user.name}(${user.role})</option>
         	</#list>
 		</select>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>

@@ -12,4 +12,5 @@ public interface UserDao {
 	public User getById(int id);
 	public List<User> getAll();
 	public User getByName(String name);
+	public List<User> getByRole(String role);
 }

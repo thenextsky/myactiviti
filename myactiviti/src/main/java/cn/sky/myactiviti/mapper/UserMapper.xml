@@ -13,4 +13,7 @@
 	<select id="getAll" resultType="cn.sky.myactiviti.bean.User">
 		select * from user
 	</select>
+	<select id="getByRole" parameterType="java.lang.String" resultType="cn.sky.myactiviti.bean.User">
+		select * from user where role=#{role}
+	</select>
 </mapper>

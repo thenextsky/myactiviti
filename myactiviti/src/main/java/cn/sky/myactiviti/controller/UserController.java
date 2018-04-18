@@ -47,4 +47,11 @@ public class UserController {
 	public String index(Model m) {
 		return "index";
 	}
+	
+	@RequestMapping("/userlist")
+	public String userlist(Model m) {
+		List<User> list = userDao.getAll();
+		m.addAttribute("userList",list);
+		return "userlist";
+	}
 }

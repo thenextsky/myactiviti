@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,10 +21,11 @@ public class TestController {
 	
 	@ResponseBody
 	@RequestMapping("/add")
-	public String add(@RequestParam String name) {
+	public String add(@RequestParam String name,@RequestParam String role) {
 		User user = new User();
 		user.setName(name);
-		userDao.add(user );
+		user.setRole(role);
+		userDao.add(user);
 		return "ok";
 	}
 	@ResponseBody

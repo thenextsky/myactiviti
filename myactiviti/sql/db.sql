@@ -1,0 +1,1 @@
+create database myactiviti charset=utf8;

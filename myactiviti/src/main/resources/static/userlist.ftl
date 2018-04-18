@@ -2,7 +2,7 @@
 <#assign base=request.contextPath>
 <html lang="en">
 	<head>
-		<title>首页</title>
+		<title>用户列表</title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,24 +18,24 @@
 	
 	      <div class="panel panel-default">
 			  <!-- Default panel contents -->
-			  <div class="panel-heading">？？？</div>
+			  <div class="panel-heading">用户列表</div>
 			  <!-- Table -->
 			  <table class="table">
 			    <thead>
 			    	<tr>
 			    		<th>id</th>
-			    		<th>？？</th>
-			    		<th>？？</th>
-			    		<th>？？</th>
+			    		<th>账号</th>
+			    		<th>角色</th>
 			    	</tr>
 			    </thead>
 			    <tbody>
-			    	<tr>
-			    		<td>1</td>
-			    		<td>？？</td>
-			    		<td>？？</td>
-			    		<td>？？</td>
-			    	</tr>
+			    	<#list userList as user>
+				    	<tr>
+				    		<td>${user.id}</td>
+				    		<td>${user.name}</td>
+				    		<td>${user.role}</td>
+				    	</tr>
+			    	</#list>
 			    </tbody>
 			  </table>
 			</div>
